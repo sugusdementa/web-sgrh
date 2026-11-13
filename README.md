@@ -1,2 +1,2 @@
 # web-sgrh
-sistema de gestion de recursos humanos perteneciente a la catedra desarrollo web. 
+Proyecto desarrrollado en el marco de la catedra Desarrollo Web - Profesor : E. Fassio. (sistema de gestion de recursos humanos)
