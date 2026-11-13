@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Recursos Humanos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1 style="margin: 0; font-family: sans-serif;">Empleados - Listados</h1>
+        <a href="empleado.html" style="display: inline-block; text-decoration: none; background-color: green; color: white; padding: 10px 15px; font-size: 16px; font-weight: bold; border-radius: 4px;">
+            + Nuevo empleado
+        </a>
+    </header>
+
+    <main>
+        <!-- Sección de filtros de búsqueda -->
+        <section aria-label="Filtros de búsqueda">
+            <form method="post" action="">
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="apellido">Ingrese apellido:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese Apellido...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sector">Sector:</label>
+                        <select id="sector" name="sector">
+                            <option value="todos">Todos</option>
+                            <option value="administracion">Administración</option>
+                            <option value="sistemas">Sistemas / IT</option>
+                            <option value="recursos_humanos">Recursos Humanos</option>
+                            <option value="ventas">Ventas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado">
+                            <option value="todos">Todos</option>
+                            <option value="activo">Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" style="background-color: #007bff; color: white;">Buscar</button>
+                    </div>
+
+                </div>
+            </form>
+
+            <div id="searchResult" class="result"></div>
+        </section>
+
+        <!-- Sección de tabla de resultados -->
+        <section aria-label="Listado de empleados" style="margin-top: 20px;">
+            <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th>Legajo</th>
+                        <th>Nombre y Apellido</th>
+                        <th>DNI</th>
+                        <th>Sector</th>
+                        <th>Categoría</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>L00124</td>
+                        <td>Juan Pérez</td>
+                        <td>12.345.678</td>
+                        <td>Sistemas / IT</td>
+                        <td>Senior</td>
+                        <td>Activo</td>
+                        <td>
+                            <button type="button" style="background-color: green; color: white;">Editar</button>
+                            <button type="button" style="background-color: red; color: white;">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>L00125</td>
+                        <td>María García</td>
+                        <td>87.654.321</td>
+                        <td>Administración</td>
+                        <td>Semi-Senior</td>
+                        <td>Inactivo</td>
+                        <td>
+                            <button type="button" style="background-color: green; color: white;">Editar</button>
+                            <button type="button" style="background-color: red; color: white;">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>L00140</td>
+                        <td>Martin Garrix</td>
+                        <td>88.657.213</td>
+                        <td>Administración</td>
+                        <td>Junior</td>
+                        <td>Activo</td>
+                        <td>
+                            <button type="button" style="background-color: green; color: white;">Editar</button>
+                            <button type="button" style="background-color: red; color: white;">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Paginación -->
+    <footer style="display: flex; justify-content: center; align-items: center; padding: 20px 0; gap: 10px;">
+        <button type="button" style="background-color: #f2f2f2; color: #333; border: 1px solid #ccc; padding: 5px 10px; cursor: pointer;">&laquo; Anterior</button>
+        <button type="button" style="background-color: blue; color: white; border: 1px solid blue; padding: 5px 10px; cursor: pointer; font-weight: bold;">1</button>
+        <button type="button" style="background-color: #ffffff; color: #333; border: 1px solid #ccc; padding: 5px 10px; cursor: pointer;">2</button>
+        <button type="button" style="background-color: #ffffff; color: #333; border: 1px solid #ccc; padding: 5px 10px; cursor: pointer;">3</button>
+        <button type="button" style="background-color: #f2f2f2; color: #333; border: 1px solid #ccc; padding: 5px 10px; cursor: pointer;">Siguiente &raquo;</button>
+    </footer>
+
+    <script src="funciones.js"></script>
+</body>
+</html>

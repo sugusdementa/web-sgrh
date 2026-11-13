@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Sistema de Gestion de Recursos Humanos</title>
+</head>
+<body>
+    <h1>Empleados - Liquidacion de Sueldos</h1>
+    <form>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="empleado">Empleado:</label>
+                <input type="text" id="empleado" name="empleado">
+            </div>
+
+            <div class="form-group">
+                <label for="fecha-ingreso">Fecha Ingreso:</label>
+                <input type="text" id="fecha-ingreso" name="fecha-ingreso">
+            </div>
+
+        </div>
+
+        <div>
+            <!--Boton calcular-->
+            <button style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                Calcular
+            </button>
+
+        </div>
+        <section>
+            <!--Desglose-->
+            <div>
+                <h2>Conceptos</h2>
+                <p>Sueldo Base</p>
+                <p>Antiguedad (10%)</p>
+                <p>Bono Categoria(25%)</p>
+                <p>Sueldo Bruto</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Descuentos</h2>
+                <p>Jubilacion(11%) </p>
+                <p>Obra social(3%)</p>
+                <p>Sindicato(2%)</p>
+                <p>Total Descuentos</p>
+            </div>
+        </section>
+        <section>
+            <p>Sueldo Neto</p>
+        </section>
+        <div>
+            <!-- botones-->
+            <button style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Guardar Liquidación</button>
+            <button style="background-color: gray; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>
