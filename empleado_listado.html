@@ -57,7 +57,7 @@
 
         <!-- Sección de tabla de resultados -->
         <section aria-label="Listado de empleados" style="margin-top: 20px;">
-            <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: left;">
+            <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: center;">
                 <thead>
                     <tr style="background-color: #f2f2f2;">
                         <th>Legajo</th>
@@ -109,9 +109,13 @@
                 </tbody>
             </table>
         </section>
+        <div class="form-group">
+            <button type="submit" style="background-color: #007bff; color: white;">Buscar</button>
+            <div id="searchResult" class="result"></div>
+        </div>
     </main>
 
-    <!-- Paginación -->
+<!-- Paginación -->
     <footer style="display: flex; justify-content: center; align-items: center; padding: 20px 0; gap: 10px;">
         <button type="button" style="background-color: #f2f2f2; color: #333; border: 1px solid #ccc; padding: 5px 10px; cursor: pointer;">&laquo; Anterior</button>
         <button type="button" style="background-color: blue; color: white; border: 1px solid blue; padding: 5px 10px; cursor: pointer; font-weight: bold;">1</button>

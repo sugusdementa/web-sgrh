@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Panel de Gestión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Sistema RRHH</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Empleados</a></li>
+                <li><a href="#">Sectores</a></li>
+                <li><a href="#">Liquidaciones</a></li>
+                <li><a href="#">Reportes</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <header>
+            <h1>Panel de Inicio</h1>
+        </header>
+
+        <!-- 1. FILA SUPERIOR: LOS 4 INDICADORES -->
+        <section class="dashboard-grid">
+
+            <!-- Card 1: Empleados -->
+            <article class="tablero-card">
+                <div class="card-header">
+                    <h2 class="card-title">Empleados</h2>
+                    <div class="card-icon icon-blue">
+                        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="stat-group">
+                        <span class="stat-label">Registrados</span>
+                        <span class="stat-number">120</span>
+                    </div>
+                    <div class="badge badge-green">
+                        <span class="dot"></span>
+                        <span>98 Activos</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: Sectores -->
+            <article class="tablero-card">
+                <div class="card-header">
+                    <h2 class="card-title">Sectores</h2>
+                    <div class="card-icon icon-purple">
+                        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="stat-group">
+                        <span class="stat-label">Cantidad</span>
+                        <span class="stat-number">8</span>
+                    </div>
+                    <div class="badge badge-neutral">
+                        <span>Operativos</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Liquidaciones -->
+            <article class="tablero-card">
+                <div class="card-header">
+                    <h2 class="card-title">Liquidaciones</h2>
+                    <div class="card-icon icon-emerald">
+                        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="stat-group">
+                        <span class="stat-label">Liquidados</span>
+                        <span class="stat-number">98</span>
+                    </div>
+                    <div class="badge badge-emerald">
+                        <span>Mes actual</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4: Reportes -->
+            <article class="tablero-card">
+                <div class="card-header">
+                    <h2 class="card-title">Reportes</h2>
+                    <div class="card-icon icon-amber">
+                        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="stat-group">
+                        <span class="stat-label">Disponibles</span>
+                        <span class="stat-number">15</span>
+                    </div>
+                    <div class="badge badge-amber">
+                        <span>Listos</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- 2. SECCIÓN INFERIOR: TABLA DE LIQUIDACIONES DEL MES -->
+        <section class="seccion-liquidaciones">
+            <h2>Liquidaciones del mes</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Empleado</th>
+                            <th>Sector</th>
+                            <th>Período</th>
+                            <th>Sueldo Neto</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>Administración</td>
+                            <td>Noviembre 2026</td>
+                            <td class="sueldo">$ 950.000</td>
+                            <td><span class="estado estado-calculada">Calculada</span></td>
+                        </tr>
+                        <tr>
+                            <td>María Gómez</td>
+                            <td>Ventas</td>
+                            <td>Noviembre 2026</td>
+                            <td class="sueldo">$ 880.000</td>
+                            <td><span class="estado estado-calculada">Calculada</span></td>
+                        </tr>
+                        <tr>
+                            <td>Carlos López</td>
+                            <td>Logística</td>
+                            <td>Noviembre 2026</td>
+                            <td class="sueldo">$ 820.000</td>
+                            <td><span class="estado estado-pendiente">Pendiente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="footer-acciones">
+                <a href="#" class="btn-primario">Ver todas las liquidaciones</a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

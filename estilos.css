@@ -1,4 +1,6 @@
-﻿/* Reinicio básico de márgenes */
+﻿/* =========================================
+   1. REINICIO Y ESTILOS GENERALES
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +15,9 @@ body {
     color: #1e293b;
 }
 
-/* Estilos del Sidebar */
+/* =========================================
+   2. BARRA LATERAL (SIDEBAR)
+   ========================================= */
 .sidebar {
     width: 250px;
     background-color: #1e293b;
@@ -24,6 +28,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 100;
 }
 
 .sidebar-header {
@@ -38,17 +43,16 @@ body {
     padding-top: 15px;
 }
 
-
-.sidebar-nav ul li a {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* Separa el ícono del texto automáticamente */
-    padding: 15px 25px;
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
+    .sidebar-nav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 25px;
+        color: #cbd5e1;
+        text-decoration: none;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
 
         .sidebar-nav ul li a:hover,
         .sidebar-nav ul li a.active {
@@ -64,23 +68,240 @@ body {
     font-size: 18px;
 }
 
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
 }
-/* Estilos del Contenido Principal */
+
+/* =========================================
+   3. CONTENIDO PRINCIPAL Y CONTENEDORES
+   ========================================= */
 .main-content {
     margin-left: 250px;
     padding: 40px;
-    width: 100%;
+    width: calc(100% - 250px);
 }
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+    header h1 {
+        font-size: 24px;
+        color: #2c3e50;
+    }
 
 .seccion-liquidaciones {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
-/* Estilos de la Tabla */
+    .seccion-liquidaciones h2 {
+        font-size: 1.25rem;
+        color: #1e293b;
+        margin-bottom: 12px;
+    }
+
+/* =========================================
+   4. TARJETAS DEL TABLERO (4 EN UNA LÍNEA)
+   ========================================= */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.tablero-card {
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    min-width: 0;
+}
+
+    .tablero-card:hover {
+        border-color: #3b82f6;
+        transform: translateY(-3px);
+    }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Colores de fondo y trazo de los íconos */
+.icon-blue {
+    background-color: #eff6ff;
+    color: #3b82f6;
+}
+
+.icon-purple {
+    background-color: #f3e8ff;
+    color: #9333ea;
+}
+
+.icon-emerald {
+    background-color: #ecfdf5;
+    color: #10b981;
+}
+
+.icon-amber {
+    background-color: #fffbeb;
+    color: #f59e0b;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 14px;
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.stat-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+}
+
+/* Etiquetas inferiores (Badges) */
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-green {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-neutral {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.badge-emerald {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.badge-amber {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+}
+
+/* =========================================
+   5. FORMULARIOS Y FILTROS
+   ========================================= */
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 180px;
+}
+
+    .form-group label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #495057;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 9px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+/* =========================================
+   6. TABLAS Y ESTADOS
+   ========================================= */
 .table-container {
     margin-top: 15px;
     background-color: #ffffff;
-    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -115,7 +336,6 @@ tbody tr {
     font-weight: 600;
 }
 
-/* Etiquetas de Estado */
 .estado {
     display: inline-block;
     padding: 4px 10px;
@@ -134,7 +354,9 @@ tbody tr {
     color: #854d0e;
 }
 
-/* Estilos del Footer y Botón */
+/* =========================================
+   7. BOTONES Y FOOTER
+   ========================================= */
 .footer-acciones {
     margin-top: 30px;
     padding: 20px 0;
@@ -158,7 +380,46 @@ tbody tr {
         background-color: #0b5ed7;
     }
 
-/* Diseño Responsivo para celulares */
+.btn-nuevo {
+    text-decoration: none;
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-nuevo:hover {
+        background-color: #218838;
+    }
+
+.btn-buscar {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-buscar:hover {
+        background-color: #0056b3;
+    }
+
+/* =========================================
+   8. DISEÑO RESPONSIVO (CELULARES Y TABLETS)
+   ========================================= */
+@media (max-width: 1150px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
@@ -178,7 +439,6 @@ tbody tr {
 
         .sidebar-nav ul li a {
             padding: 15px 10px;
-            display: flex
         }
 
             .sidebar-nav ul li a:hover,
@@ -189,6 +449,7 @@ tbody tr {
 
     .main-content {
         margin-left: 0;
+        width: 100%;
         padding: 20px;
     }
 
@@ -197,204 +458,8 @@ tbody tr {
     }
 }
 
-.fa-solid, .fas {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-}
-/* Estilos generales */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f4f6f9;
-    color: #333;
-    padding: 30px;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* Cabecera */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-    header h1 {
-        font-size: 24px;
-        color: #2c3e50;
+@media (max-width: 600px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
     }
-
-.btn-nuevo {
-    text-decoration: none;
-    background-color: #28a745;
-    color: white;
-    padding: 10px 18px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.2s;
 }
-
-    .btn-nuevo:hover {
-        background-color: #218838;
-    }
-
-/* Formulario de filtros en fila */
-.form-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: flex-end;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 6px;
-    border: 1px solid #e9ecef;
-    margin-bottom: 25px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 180px;
-}
-
-    .form-group label {
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 5px;
-        color: #495057;
-    }
-
-    .form-group input,
-    .form-group select {
-        padding: 9px 12px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        font-size: 14px;
-        background-color: #fff;
-    }
-
-.btn-buscar {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    height: 38px;
-}
-
-    .btn-buscar:hover {
-        background-color: #0069d9;
-    }
-
-/* Tabla */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #dee2e6;
-}
-
-thead tr {
-    background-color: #f1f3f5;
-    color: #333;
-}
-
-tbody tr:hover {
-    background-color: #f8f9fa;
-}
-
-/* Botones de acciones */
-.btn-editar {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 13px;
-    margin-right: 5px;
-}
-
-.btn-eliminar {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 13px;
-}
-
-/* Paginación */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 15px;
-    gap: 8px;
-}
-
-.btn-pag {
-    background-color: #ffffff;
-    color: #333;
-    border: 1px solid #ced4da;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-    .btn-pag.activo {
-        background-color: #007bff;
-        color: white;
-        border-color: #007bff;
-        font-weight: bold;
-    }
-/* Estilos para íconos en la tabla */
-.acciones {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-    .acciones a {
-        color: #475569;
-        text-decoration: none;
-        transition: color 0.2s ease, transform 0.2s ease;
-    }
-
-        .acciones a:hover {
-            transform: scale(1.15);
-        }
-
-        .acciones a[title="Editar"]:hover {
-            color: #0d6efd; /* Azul al pasar el mouse */
-        }
-
-        .acciones a[title="Eliminar"]:hover {
-            color: #dc2626; /* Rojo al pasar el mouse */
-        }
